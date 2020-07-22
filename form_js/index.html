@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="./style.scss">
+  </head>
+  <body>
+    <main>
+      <div class="submit">
+        <form id="form">
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname">
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname">
+          <label for="address">Address</label>
+          <textarea id="address"; rows="2" cols="30" name="address"></textarea>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age">
+          <label for="gender">Gender:</label>
+          <select name="gender" id="genderSelect" placeholder="Select">
+            <option value="men">Man</option>
+            <option value="female">female</option>
+            <option value="pnts">Prefer not to say</option>
+          </select>
+          <h3 >Interests</h3>
+          <label for="interest">Cycling</label>
+          <input type="checkbox" id="interest" name="interest" value="Cycling">
+          <label for="interest">Trekking</label>
+          <input type="checkbox" id="interest" name="interest" value="Trekking">
+          <label for="interest">Gaming</label>
+          <input type="checkbox" id="interest" name="interest" value="Gaming">
+          <label for="interest">Reading</label>
+          <input type="checkbox" id="interest" name="interest" value="Reading">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div id="result">
+        <p id="resfname"></p>
+        <p id="reslname"></p>
+        <p id="resage"></p>
+        <p id="resaddress"></p>
+        <p id="resgender"></p>
+        <p id="resinterest"></p>
+      </div>
+    </main>
+    <script src="./js_file.js"></script>
+  </body>
+</html>
