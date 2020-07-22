@@ -1,6 +1,4 @@
-var form = document.getElementById("form");
 form.addEventListener('submit', (event)=> {
-    event.preventDefault()
     var interests=""
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;
