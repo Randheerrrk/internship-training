@@ -3,47 +3,91 @@
   <head>
     <meta charset="utf-8">
     <title>Form</title>
-    <link rel="stylesheet" href="./style.scss">
+    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
     <main>
       <div class="submit">
-        <form id="form">
-          <label for="fname">First name:</label>
-          <input type="text" id="fname" name="fname">
-          <label for="lname">Last name:</label>
-          <input type="text" id="lname" name="lname">
-          <label for="address">Address</label>
-          <textarea id="address"; rows="2" cols="30" name="address"></textarea>
-          <label for="age">Age:</label>
-          <input type="number" id="age" name="age">
-          <label for="gender">Gender:</label>
-          <select name="gender" id="genderSelect" placeholder="Select">
-            <option value="men">Man</option>
-            <option value="female">female</option>
-            <option value="pnts">Prefer not to say</option>
-          </select>
-          <h3 >Interests</h3>
-          <label for="interest">Cycling</label>
-          <input type="checkbox" id="interest" name="interest" value="Cycling">
-          <label for="interest">Trekking</label>
-          <input type="checkbox" id="interest" name="interest" value="Trekking">
-          <label for="interest">Gaming</label>
-          <input type="checkbox" id="interest" name="interest" value="Gaming">
-          <label for="interest">Reading</label>
-          <input type="checkbox" id="interest" name="interest" value="Reading">
-          <input type="submit" value="Submit">
+        <form id="formEle">
+          <div class="form-group">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" class="form-control"name="fname">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" class="form-control" name="lname">
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" class="form-control" rows="2" cols="30" name="address"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" name="age">
+          </div>
+          <div class="form-class">
+            <label for="gender">Gender:</label>
+            <select name="gender" id="genderSelect" class="form-control" placeholder="Select">
+              <option value="men">Man</option>
+              <option value="female">female</option>
+              <option value="pnts">Prefer not to say</option>
+            </select>
+          </div>
+          <div class="interestDiv">
+            <label>Interests:</label>
+            <div class="checkB">
+              <div class="form-group form-check">
+                <input type="checkbox" id="interest0" class="custom-control-inpu" name="interest0" value="Cycling">
+                <label class="form-check-label" for="interest0">Cycling</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" id="interest1" class="custom-control-inpu" name="interest1" value="Trekking">
+                <label class="form-check-label" for="interest1">Trekking</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" id="interest2" class="custom-control-inpu" name="interest2" value="Gaming">
+                <label class="form-check-label" for="interest2">Gaming</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" id="interest3" class="custom-control-inpu" name="interest3" value="Reading">
+                <label class="form-check-label" for="interest3">Reading</label>
+              </div>
+            </div>
+          </div>
+          <input type="submit" id="submit" class="btn btn-primary" value="Submit">
         </form>
       </div>
-      <div id="result">
-        <p id="resfname"></p>
-        <p id="reslname"></p>
-        <p id="resage"></p>
-        <p id="resaddress"></p>
-        <p id="resgender"></p>
-        <p id="resinterest"></p>
+      <div class="result">
+        <div class="table">
+          <table id="formtable" class="table table-dark">
+            <tr>
+              <th>
+                First Name
+              </th>
+              <th>
+                Last Name
+              </th>
+              <th>
+                Address
+              </th>
+              <th>
+                Age
+              </th>
+              <th>
+                Gender
+              </th>
+              <th>
+                Interests
+              </th>
+            </tr>
+          </table>
+        </div>
       </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="./js_file.js"></script>
   </body>
 </html>
