@@ -8,7 +8,7 @@
   <body>
     <main>
       <div class="submit">
-        <form>
+        <form id="form" onsubmit="onSubmit()">
           <label for="fname">First name:</label>
           <input type="text" id="fname" name="fname">
           <label for="lname">Last name:</label>
@@ -32,8 +32,8 @@
           <input type="checkbox" id="interest" name="interest" value="Gaming">
           <label for="interest">Reading</label>
           <input type="checkbox" id="interest" name="interest" value="Reading">
+          <input type="submit" value="Submit">
         </form>
-        <button onClick="onSubmit();return false;">submit</button>
       </div>
       <div id="result">
         <p id="resfname"></p>
@@ -47,3 +47,5 @@
     <script src="./js_file.js"></script>
   </body>
 </html>
+
+

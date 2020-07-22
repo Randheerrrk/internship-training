@@ -1,19 +1,13 @@
- 
-function onSubmit() {
-    var fname;
-    var lname;
-    var age;
-    var address;
-    var gender;
-    var interest;
-    var interests = "";
-
-    fname = document.getElementById("fname").value;
-    lname = document.getElementById("lname").value;
-    address = document.getElementById("address").value;
-    age = document.getElementById("age").value;
-    gender = document.getElementById("genderSelect").value;
-    interest = document.getElementsByName("interest");
+var form = document.getElementById("form");
+form.addEventListener('submit', (event)=> {
+    event.preventDefault()
+    var interests=""
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var address = document.getElementById("address").value;
+    var age = document.getElementById("age").value;
+    var gender = document.getElementById("genderSelect").value;
+    var interest = document.getElementsByName("interest");
     for(var i=0; i<interest.length; i++) {
         if(interest[i].checked) {
             interests+=interest[i].value+' ';
@@ -27,4 +21,4 @@ function onSubmit() {
     document.getElementById("resage").innerHTML = "Age: "+ age;
     document.getElementById("resgender").innerHTML = "Gender: "+ gender;
     document.getElementById("resinterest").innerHTML = "Interest: "+ interests;
-}
+})
