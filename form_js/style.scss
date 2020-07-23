@@ -3,31 +3,38 @@ main {
     padding: 20px;
 }
 
-.submit {
+.submitForm {
+    font-weight: bold;
+    color: rgba(31, 29, 33, 0.8);
     max-width: 1000px;
-    margin: 2rem auto;
-    border: 2px solid #313131;
+    margin: auto;
     padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(31, 31, 31, 0.8);
 }
 
 .interestDiv {
-    margin-top: 10px; 
+    margin-top: 15px; 
     position: relative;
+    display: flex;
 }
 
-.checkB {
+.interestDiv .checkB {
     display: flex;
 }
 
 .result {
     max-width: 1000px;
     margin: 2rem auto;
-    border: 2px solid #313131;
-    padding: 1.5rem;
+    background-color: rgba(31, 29, 33, 0.8);
+    box-shadow: 0 0 10px rgba(31, 31, 31, 0.8);
+
 }
 
 #submit {
+    background-color: rgba(31, 29, 33, 0.8);
+    width: 200px;
     position: relative;
     left: 50%;
     translate: -50%;
 }
+
