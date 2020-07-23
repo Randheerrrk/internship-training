@@ -26,5 +26,4 @@ createComp = (formdata) => {
             newRow.insertCell(i).innerHTML = formdata.get(headings[i])
         }
     }
-    console.log(formdata.get("interest"))
 }
