@@ -4,18 +4,19 @@ document.addEventListener('submit', (event) => {
     return fetchData(form)
 })
 
+const per_page = 20;
+const pageNo = 1;
+
 const fetchData = async (form) => {
-    let result = await (await fetch(`${form.action}${form.elements.searchVal.value}`)).json()
+    let result = await (await fetch(`${form.action}${form.elements.searchVal.value}&page=${pageNo}&per_page=${per_page}`)).json()
     let items = result.items
     let resultDiv = document.getElementById("result")
     while(resultDiv.firstChild) {
         resultDiv.firstChild.remove()
     }
-    let child = document.createElement("div")
-    console.log(items.length)
+    let uL = document.createElement('ul')
     items.map((item, index) => {
-        var child = document.createElement("div")
-        child.className = "column"
+        var li = document.createElement('li')
         var childCard = document.createElement("div")
         childCard.className = "card"
         let img = document.createElement("img")
@@ -28,7 +29,8 @@ const fetchData = async (form) => {
         a.href = item.html_url
         a.innerHTML = "view profile"
         childCard.appendChild(a)
-        child.appendChild(childCard)
-        resultDiv.appendChild(child)
+        li.appendChild(childCard)
+        uL.appendChild(li)
     })
+    resultDiv.appendChild(uL)
 }
