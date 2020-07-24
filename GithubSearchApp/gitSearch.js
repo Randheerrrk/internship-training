@@ -8,14 +8,16 @@ const fetchData = async (form) => {
     let result = await (await fetch(`${form.action}${form.elements.searchVal.value}`)).json()
     let items = result.items
     let resultDiv = document.getElementById("result")
-    if(resultDiv.firstChild) {
+    while(resultDiv.firstChild) {
         resultDiv.firstChild.remove()
     }
     let child = document.createElement("div")
-    console.log(items[1])
+    console.log(items.length)
     items.map((item, index) => {
+        var child = document.createElement("div")
+        child.className = "column"
         var childCard = document.createElement("div")
-        childCard.id = "card"
+        childCard.className = "card"
         let img = document.createElement("img")
         img.src = item.avatar_url
         childCard.appendChild(img)
@@ -27,6 +29,6 @@ const fetchData = async (form) => {
         a.innerHTML = "view profile"
         childCard.appendChild(a)
         child.appendChild(childCard)
+        resultDiv.appendChild(child)
     })
-    resultDiv.appendChild(child)
 }
