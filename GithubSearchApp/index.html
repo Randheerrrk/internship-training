@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h3>
+        Github Search App
+      </h3>
+    </header>
+    <main>
+      <div class="heading_box">
+        <h2 id="heading">
+          Github Search App!
+        </h2><br />
+        <form id="searchForm" action="https://api.github.com/search/users?q=" method="GET">
+          <input type="text" id="searchVal"/>
+          <input type="submit" id="submitVal" value="submit"/>
+        </form>
+      </div>
+      <div class="result" id="result">
+      </div>
+    </main>
+    <footer>Bowdhi tech</footer>
+    <script src="gitSearch.js">
+    </script>
+  </body>
+</html>

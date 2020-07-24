@@ -1,9 +1,8 @@
-const form = document.forms[0]
-const headings = [ "fname", "lname", "address", "age", "gender", "interest"]
-form.addEventListener('submit', (event)=> {
+document.addEventListener('submit', (event)=> {
     event.preventDefault()
-    var formdata = new FormData(form)
-    createComp(formdata)
+    var formData = event.target.elements
+    console.log(formData.interest)
+    //createComp(formData)
 })
 
 createComp = (formdata) => {
@@ -14,13 +13,13 @@ createComp = (formdata) => {
             var interestChecked=""
             for(var j=0; j<4; j++) {
                 if(formdata.get("interest"+j)!==null) {
-                    interestChecked+=formdata.get("interest"+j)+"<br>"
+                    interestChecked+=formdata.get("interest"+j)+"<br />"
                 }
             } 
             newRow.insertCell(i).innerHTML = interestChecked
         }
         else if(headings[i]==="address") {
-            newRow.insertCell(i).innerHTML = formdata.get('address').replace(/\r?\n/g, "<br>")
+            newRow.insertCell(i).innerHTML = formdata.get('address').replace(/\r?\n/g, "<br />")
         }    
         else {
             newRow.insertCell(i).innerHTML = formdata.get(headings[i])
