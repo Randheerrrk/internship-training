@@ -5,7 +5,7 @@ document.addEventListener('submit', (event) => {
 })
 
 const per_page = 20;
-const pageNo = 1;
+var pageNo = 1;
 
 const fetchData = async (form) => {
     let result = await (await fetch(`${form.action}${form.elements.searchVal.value}&page=${pageNo}&per_page=${per_page}`)).json()
@@ -34,3 +34,9 @@ const fetchData = async (form) => {
     })
     resultDiv.appendChild(uL)
 }
+
+
+
+
+
+
