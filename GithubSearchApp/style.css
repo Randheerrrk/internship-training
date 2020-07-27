@@ -31,17 +31,17 @@ header {
 }
 
 #searchVal {
-    border-radius: 0;
+    height: 40px;
+    border-width: 0px;
+    border-bottom-width: 1px;
     border-color: rgba(118, 132, 222, 1);
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
+    margin: 10px;
 }
 
 #submitVal {
     width: 80px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 0;
     color: #f1f1f1;
     background-color: rgba(125, 162, 222, 1);
@@ -49,14 +49,35 @@ header {
 
 .result {
     color: rgba(118, 132, 222, 1);
-    display: inline-block;
-    float: left;
     width: 1200px;
 }
 
-.result img {
+
+
+.card {
+    color: rgba(125, 162, 222, 1);
+    margin: 15px;
+    width: 200px;
+    height: 220px;
+    box-shadow: 0 0 5px rgba(118, 132, 222, 1);
+    border-radius: 20px;
+}
+
+.card img {
     width: 150px;
     height: auto;
+    padding-top: 10px;
+    border-radius: 50%;
+}
+
+a {
+    color: rgba(135, 152, 212, 1);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(255, 57, 23, 1);
+    transition: 1s;
 }
 
 footer {
