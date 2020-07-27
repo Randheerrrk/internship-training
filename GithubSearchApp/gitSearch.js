@@ -52,6 +52,7 @@ const fetchData = async (form) => {
             resultDiv.appendChild(childCard)
         })
 
+        let pageList = document.getElementById("pageList")
         let pageDiv = document.createElement("div")
         pageDiv.id = "pageDiv"
 
@@ -75,7 +76,6 @@ const fetchData = async (form) => {
             next_page.style.visibility = "hidden";
         }
 
-        let pageList = document.getElementById("pageList")
         while(pageList.firstChild) {
             pageList.firstChild.remove()
         }
@@ -85,14 +85,7 @@ const fetchData = async (form) => {
         pageList.appendChild(pageDiv)
     }
     else {
-        while(resultDiv.firstChild) {
-            resultDiv.firstChild.remove()
-        }
-
-        var p = document.createElement("p")
-        p.innerHTML = "Enter a name..."
-        p.id = "noValue"
-        resultDiv.appendChild(p)
+        alert("Enter a Name....")
     }
 }
 
