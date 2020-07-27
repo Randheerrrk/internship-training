@@ -26,56 +26,69 @@ const fetchData = async (form) => {
     if(form.elements.searchVal.value!="") {
         let result = await (await fetch(`${form.action}${form.elements.searchVal.value}&page=${pageNo}&per_page=${per_page}`)).json()
         let items = result.items
+
         while(resultDiv.firstChild) {
             resultDiv.firstChild.remove()
         }
-        let uL = document.createElement('ul')
+
         items.map((item, index) => {
-            var li = document.createElement('li')
+
             var childCard = document.createElement("div")
             childCard.className = "card"
+
             let img = document.createElement("img")
             img.src = item.avatar_url
             childCard.appendChild(img)
+
             var h4 = document.createElement("h4")
             h4.innerHTML = item.login
             childCard.appendChild(h4)
+
             var a = document.createElement("a")
             a.href = item.html_url
             a.innerHTML = "view profile"
             childCard.appendChild(a)
-            li.appendChild(childCard)
-            uL.appendChild(li)
+
+            resultDiv.appendChild(childCard)
         })
+
         let pageDiv = document.createElement("div")
         pageDiv.id = "pageDiv"
+
         let prev_page = document.createElement("a")
-        prev_page.innerHTML = "&laquo; Previous"
+        prev_page.innerHTML = "&laquo;"
         prev_page.id = "prev_page"
         prev_page.href = "#"
         if(pageNo===1) {
             prev_page.style.visibility = "hidden";
         }
+
         let page_no = document.createElement('p')
         page_no.innerHTML = pageNo
         page_no.id = "page_no"
+
         let next_page = document.createElement("a")
-        next_page.innerHTML = "Next &raquo;"
+        next_page.innerHTML = "&raquo;"
         next_page.id = "next_page"
         next_page.href = "#"
         if(items.length<per_page) {
             next_page.style.visibility = "hidden";
         }
+
+        let pageList = document.getElementById("pageList")
+        while(pageList.firstChild) {
+            pageList.firstChild.remove()
+        }
         pageDiv.appendChild(prev_page)
         pageDiv.appendChild(page_no)
         pageDiv.appendChild(next_page)
-        resultDiv.appendChild(uL)
-        resultDiv.appendChild(pageDiv)
+        pageList.appendChild(pageDiv)
     }
     else {
         while(resultDiv.firstChild) {
             resultDiv.firstChild.remove()
         }
+
         var p = document.createElement("p")
         p.innerHTML = "Enter a name..."
         p.id = "noValue"

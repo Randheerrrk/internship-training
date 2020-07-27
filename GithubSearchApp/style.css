@@ -15,11 +15,13 @@ body {
     text-align: center;
     min-height: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
 header {
     padding: 30px;
+    width: 100%;
     color: #f1f1f1;
     background-color: rgba(86, 119, 252, .8);
     text-align: left;
@@ -31,17 +33,17 @@ header {
 }
 
 #searchVal {
-    border-radius: 0;
+    height: 40px;
+    border-width: 0px;
+    border-bottom-width: 1px;
     border-color: rgba(118, 132, 222, 1);
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
+    margin: 10px;
 }
 
 #submitVal {
     width: 80px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 0;
     color: #f1f1f1;
     background-color: rgba(125, 162, 222, 1);
@@ -49,17 +51,59 @@ header {
 
 .result {
     color: rgba(118, 132, 222, 1);
-    display: inline-block;
-    float: left;
-    width: 1200px;
+    width: 1300px;
+    margin-top: 20px;   
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.result img {
+#pageList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: rgba(118, 132, 222, 1);
+}
+
+.card {
+    display: flexbox;
+    color: rgba(125, 162, 222, 1);
+    margin: 15px;
+    width: 230px;
+    height: 220px;
+    box-shadow: 0 0 5px rgba(118, 132, 222, 1);
+    border-radius: 20px;
+}
+
+.card img {
     width: 150px;
     height: auto;
+    padding-top: 10px;
+    border-radius: 50%;
+}
+
+a {
+    color: rgba(135, 152, 212, 1);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(255, 57, 23, 1);
+    transition: 1s;
+}
+
+#pageDiv {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    float: left;
+}
+
+#pageDiv a {
+    margin: 10px;
 }
 
 footer {
+    width: 100%;
     margin-top: auto;
     padding: 20px;
     color: #f1f1f1;
