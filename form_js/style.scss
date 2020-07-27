@@ -1,17 +1,28 @@
 main {
+    position: absolute;
+    top: 50%;
     left: 50%;
     padding: 20px;
+    translate: -50% -50%;
 }
 
+<<<<<<< HEAD
 .submitForm {
     font-weight: bold;
     color: rgba(31, 29, 33, 0.8);
     max-width: 1000px;
     margin: auto;
+=======
+.submit {
+    max-width: 500px;
+    margin: 2rem auto;
+    border: 2px solid #313131;
+>>>>>>> parent of 45c2214... UI changes and added functions
     padding: 1.5rem;
     box-shadow: 0 0 10px rgba(31, 31, 31, 0.8);
 }
 
+<<<<<<< HEAD
 .interestDiv {
     margin-top: 15px; 
     position: relative;
@@ -33,8 +44,27 @@ main {
 #submit {
     background-color: rgba(31, 29, 33, 0.8);
     width: 200px;
+=======
+
+label{
+    display: block;
+    font-weight: bold;
+}
+
+input {
+    margin: 3px;
+}
+
+button {
+>>>>>>> parent of 45c2214... UI changes and added functions
     position: relative;
     left: 50%;
     translate: -50%;
 }
 
+<<<<<<< HEAD
+=======
+p {
+    font-size: 20px;
+}
+>>>>>>> parent of 45c2214... UI changes and added functions
