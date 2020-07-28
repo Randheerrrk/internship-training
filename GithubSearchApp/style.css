@@ -55,7 +55,6 @@ header {
     margin-top: 20px;   
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
 }
 
 #pageList {
@@ -110,7 +109,17 @@ footer {
     background-color: rgba(86, 119, 252, .8);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1300px) {
+    .result {
+        width: 100%;
+    }
+    
+    .card {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 900px) {
     .result {
         width: 100%;
     }
